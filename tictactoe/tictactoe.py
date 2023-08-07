@@ -3,6 +3,7 @@ Tic Tac Toe Player
 """
 
 import math
+from copy import deepcopy
 
 X = "X"
 O = "O"
@@ -46,7 +47,7 @@ def actions(board):
     possibleactions = set()
     for row in range(3):
         for col in range(3):
-            if board[row][col] != EMPTY:
+            if board[row][col] == EMPTY:
                 possibleactions.append(row,col)
     return possibleactions
 
